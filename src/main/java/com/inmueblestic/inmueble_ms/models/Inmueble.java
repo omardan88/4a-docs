@@ -6,27 +6,31 @@ public class Inmueble {
     @Id
     private String id;
     private String propietario;
-    private String Ubicacion_ciudad;
-    private String Ubicacion_barrio;
+    private String ubicacionCiudad;
+    private String ubicacionBarrio;
     private Integer habitaciones;
-    private Integer baños;
-    private double dimension;
+    private Integer numeroBanios;
+    private double dimension; //se refiere a los m2
+    private String tipo; //Desde el front solo se desplegaran 3 opciones, casa, apto, habitacion
     private String descripcion;
-    private double precio;
+    private double precioDia;
     private boolean disponible;
 
-    public Inmueble(String id, String propietario, String ubicacion_ciudad, String ubicacion_barrio,
-                    Integer habitaciones, Integer  banos, double dimension, String descripcion, double precio, boolean disponible) {
 
+
+
+    public Inmueble(String id, String propietario, String ubicacionCiudad, String ubicacionBarrio,
+                  Integer habitaciones, Integer  numeroBanios, double dimension, String tipo, String descripcion, double precioDia, boolean disponible) {
         this.id = id;
         this.propietario = propietario;
-        Ubicacion_ciudad = ubicacion_ciudad;
-        Ubicacion_barrio = ubicacion_barrio;
+        this.ubicacionCiudad = ubicacionCiudad;
+        this.ubicacionBarrio = ubicacionBarrio;
         this.habitaciones = habitaciones;
-        this.baños = baños;
+        this.numeroBanios = numeroBanios;
         this.dimension = dimension;
         this.descripcion= descripcion;
-        this.precio = precio;
+        this.tipo = tipo;
+        this.precioDia = precioDia;
         this.disponible= disponible;
     }
 
@@ -46,20 +50,20 @@ public class Inmueble {
         this.propietario = propietario;
     }
 
-    public String getUbicacion_ciudad() {
-        return Ubicacion_ciudad;
+    public String getUbicacionCiudad() {
+        return ubicacionCiudad;
     }
 
-    public void setUbicacion_ciudad(String ubicacion_ciudad) {
-        Ubicacion_ciudad = ubicacion_ciudad;
+    public void setUbicacionCiudad(String ubicacionCiudad) {
+        this.ubicacionCiudad = ubicacionCiudad;
     }
 
-    public String getUbicacion_barrio() {
-        return Ubicacion_barrio;
+    public String getUbicacionBarrio() {
+        return ubicacionBarrio;
     }
 
-    public void setUbicacion_barrio(String ubicacion_barrio) {
-        Ubicacion_barrio = ubicacion_barrio;
+    public void setUbicacionBarrio(String ubicacionBarrio) {
+        this.ubicacionBarrio = ubicacionBarrio;
     }
 
     public Integer getHabitaciones() {
@@ -70,12 +74,12 @@ public class Inmueble {
         this.habitaciones = habitaciones;
     }
 
-    public Integer getBaños() {
-        return baños;
+    public Integer getNumeroBanios() {
+        return numeroBanios;
     }
 
-    public void setBaños(Integer baños) {
-        this.baños = baños;
+    public void setNumeroBanios(Integer numeroBanios) {
+        this.numeroBanios = numeroBanios;
     }
 
     public double getDimension() {
@@ -86,12 +90,12 @@ public class Inmueble {
         this.dimension = dimension;
     }
 
-    public double getPrecio() {
-        return precio;
+    public double getPrecioDia() {
+        return precioDia;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setPrecioDia(double precioDia) {
+        this.precioDia = precioDia;
     }
 
     public String getDescripcion() {
@@ -108,5 +112,13 @@ public class Inmueble {
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
