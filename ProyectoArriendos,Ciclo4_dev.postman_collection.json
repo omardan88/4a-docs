@@ -216,7 +216,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"propietario\" :  \"JuanPropietario1\",\r\n        \"ubicacionCiudad\" : \"Bogota\",\r\n        \"ubicacionBarrio\" : \"Bosa\",\r\n        \"habitaciones\" : 3,\r\n        \"numeroBanios\" : 3,\r\n        \"dimension\" : 40,\r\n        \"tipoInmueble\": \"Casa\",\r\n        \"descripcion\" : \"Buena vista\",\r\n        \"precioDia\" : 1000,\r\n        \"disponible\" : true\r\n}",
+							"raw": "{\r\n        \"propietario\" :  \"Pedro\",\r\n        \"ubicacionCiudad\" : \"Medellin\",\r\n        \"ubicacionBarrio\" : \"Popular\",\r\n        \"habitaciones\" : 3,\r\n        \"numeroBanios\" : 3,\r\n        \"dimension\" : 40,\r\n        \"tipoInmueble\": \"Casa\",\r\n        \"descripcion\" : \"Casa con vista al parque\",\r\n        \"precioDia\" : 2000,\r\n        \"disponible\" : true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -224,11 +224,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/publicarEspacio",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/publicarEspacio",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"publicarEspacio"
 							]
@@ -243,7 +245,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"61abf728911a1936eb003660\",\r\n    \"propietario\": \"JuanPropietario\",\r\n    \"ubicacionCiudad\": \"Bogota\",\r\n    \"ubicacionBarrio\": \"Bosa\",\r\n    \"habitaciones\": 3,\r\n    \"numeroBanios\": 3,\r\n    \"dimension\": 40.0,\r\n    \"tipoInmueble\": \"Casa\",\r\n    \"descripcion\": \"Buena vista, Mod\",\r\n    \"precioDia\": 1000.0,\r\n    \"disponible\": true\r\n}",
+							"raw": "{\r\n    \"id\": \"61ac4dd8da9ced642e1d5fd0\",\r\n    \"propietario\": \"Pedro\",\r\n    \"ubicacionCiudad\": \"Medellin\",\r\n    \"ubicacionBarrio\": \"Popular\",\r\n    \"habitaciones\": 3,\r\n    \"numeroBanios\": 3,\r\n    \"dimension\": 40.0,\r\n    \"tipoInmueble\": \"Casa\",\r\n    \"descripcion\": \"Casa con vista al parque, con ventanas\",\r\n    \"precioDia\": 2000.0,\r\n    \"disponible\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -251,11 +253,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/inmueble/update",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/inmueble/update",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"inmueble",
 								"update"
@@ -270,15 +274,17 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/inmueble/delete/61abf778911a1936eb003661",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/inmueble/delete/61ac4dd8da9ced642e1d5fd0",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"inmueble",
 								"delete",
-								"61abf778911a1936eb003661"
+								"61ac4dd8da9ced642e1d5fd0"
 							]
 						}
 					},
@@ -290,14 +296,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/inmueblesID/61ac3a25a4dbf32b317aa3c6",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/inmueblesID/61abf728911a1936eb003660",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"inmueblesID",
-								"61ac3a25a4dbf32b317aa3c6"
+								"61abf728911a1936eb003660"
 							]
 						}
 					},
@@ -309,11 +317,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/inmuebles",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/inmuebles",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"inmuebles"
 							]
@@ -327,11 +337,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/misEspacios/JuanPropietario",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/misEspacios/JuanPropietario",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"misEspacios",
 								"JuanPropietario"
@@ -347,7 +359,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"idInmueble\" : \"61abf728911a1936eb003660\",\r\n        \"inquilino\" : \"juanInquilino\",\r\n        \"fechaInicio\" : \"07-12-2021\",\r\n        \"fechaFin\" : \"08-12-2021\"\r\n        }",
+							"raw": "{\r\n        \"idInmueble\" : \"61abf728911a1936eb003660\",\r\n        \"inquilino\" : \"Carlos\",\r\n        \"fechaInicio\" : \"10-12-2021\",\r\n        \"fechaFin\" : \"11-12-2021\"\r\n        }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -355,11 +367,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/reservas",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/reservas",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"reservas"
 							]
@@ -373,14 +387,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/misReservas/juanInquilino",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/misReservas/Carlos",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"misReservas",
-								"juanInquilino"
+								"Carlos"
 							]
 						}
 					},
@@ -392,11 +408,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/misBalances/JuanPropietario",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/misBalances/JuanPropietario",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"misBalances",
 								"JuanPropietario"
@@ -420,11 +438,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/misReservas/update",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/misReservas/update",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"misReservas",
 								"update"
@@ -459,11 +479,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/inmueblesCiudad/Bogota",
+							"raw": "https://misiontic-inmueble-ms.herokuapp.com/inmueblesCiudad/Bogota",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"misiontic-inmueble-ms",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"inmueblesCiudad",
 								"Bogota"
