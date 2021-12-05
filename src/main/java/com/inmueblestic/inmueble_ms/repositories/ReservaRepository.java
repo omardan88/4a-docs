@@ -8,5 +8,6 @@ import java.util.List;
 public interface ReservaRepository extends MongoRepository<Reserva, String>{
     List<Reserva> findByPropietario(String propietario);
     List<Reserva> findByInquilino(String inquilino);
+    List<Reserva> findByIdInmueble(String idInmueble);
 
 }

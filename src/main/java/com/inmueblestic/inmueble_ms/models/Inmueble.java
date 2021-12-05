@@ -11,7 +11,7 @@ public class Inmueble {
     private Integer habitaciones;
     private Integer numeroBanios;
     private double dimension; //se refiere a los m2
-    private String tipo; //Desde el front solo se desplegaran 3 opciones, casa, apto, habitacion
+    private String tipoInmueble; //Desde el front solo se desplegaran 3 opciones, casa, apto, habitacion
     private String descripcion;
     private double precioDia;
     private boolean disponible;
@@ -20,7 +20,7 @@ public class Inmueble {
 
 
     public Inmueble(String id, String propietario, String ubicacionCiudad, String ubicacionBarrio,
-                  Integer habitaciones, Integer  numeroBanios, double dimension, String tipo, String descripcion, double precioDia, boolean disponible) {
+                  Integer habitaciones, Integer  numeroBanios, double dimension, String tipoInmueble, String descripcion, double precioDia, boolean disponible) {
         this.id = id;
         this.propietario = propietario;
         this.ubicacionCiudad = ubicacionCiudad;
@@ -29,7 +29,7 @@ public class Inmueble {
         this.numeroBanios = numeroBanios;
         this.dimension = dimension;
         this.descripcion= descripcion;
-        this.tipo = tipo;
+        this.tipoInmueble = tipoInmueble;
         this.precioDia = precioDia;
         this.disponible= disponible;
     }
@@ -114,11 +114,11 @@ public class Inmueble {
         this.disponible = disponible;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTipoInmueble() {
+        return tipoInmueble;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipoInmueble(String tipoInmueble) {
+        this.tipoInmueble = tipoInmueble;
     }
 }

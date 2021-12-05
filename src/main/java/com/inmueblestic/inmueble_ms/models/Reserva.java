@@ -15,16 +15,15 @@ public class Reserva {
     private String idInmueble;
     private String propietario;
     private String inquilino;
-    @JsonFormat(pattern="dd-MM-yyyy")
+    @JsonFormat(pattern="dd-MM-yyyy",shape = JsonFormat.Shape.STRING)
     private LocalDate fechaInicio;
     @JsonFormat(pattern="dd-MM-yyyy")
     private LocalDate fechaFin;
     private double precioTotal;
-    @JsonFormat(pattern="dd-MM-yyyy HH:mm:ss")
     private LocalDateTime fechaReserva;
 
 
-
+/*
     public Reserva(String id, String idInmueble, String propietario, String inquilino, String fechaInicio, String fechaFin, double precioTotal, LocalDateTime fechaReserva) {
         this.id = id;
         this.idInmueble =idInmueble;
@@ -34,7 +33,7 @@ public class Reserva {
         this.fechaFin = LocalDate.parse(fechaFin, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
         this.precioTotal = precioTotal;
         this.fechaReserva = fechaReserva;
-    }
+    }*/
 
     public String getId() {
         return id;
@@ -100,3 +99,4 @@ public class Reserva {
         this.fechaReserva = fechaReserva;
     }
 }
+
