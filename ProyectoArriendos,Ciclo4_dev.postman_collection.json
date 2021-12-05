@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "ed338c02-53ca-4b32-afe4-39e0269ff51e",
+		"name": "ProyectoArriendos,Ciclo4_dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MicroservicioAutenticacion",
+			"item": [
+				{
+					"name": "CrearRolUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"name\": \"Arrendador\",\r\n       \"description\":\"Es quien da u ofrece un espacio en arrendamiento.\"\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/rol/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rol",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar roles Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2ODY3NDI2LCJqdGkiOiI4ZjA5ZDk4ZDc1Zjk0MDJiYjM2MTU4NzgzYTZhZDlhYSIsInVzZXJfaWQiOjF9.AazKteSiGjBaGe9D3BmmUFCesViJE-VDeIp9_4SoYF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/rol/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"rol",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegistrarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"username\": \"usr1\",\r\n\"password\": \"123456\",\r\n\"name\": \"usr1\",\r\n\"last_name\": \"usr1\",\r\n\"cedula\":\"123456\",\r\n\"email\": \"usr1@gmail.com\",\r\n\"rol\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"usr1\",\r\n    \"password\":\"123456\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Usuario por ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2ODY3NDg5LCJqdGkiOiJlNGI5MWVjZjZmNzI0MjFjOTczYzUzZWYzYjlhMDBmOSIsInVzZXJfaWQiOjF9.EwWRzK_4enTMADVV6iJa-ts1arXBEyLvNhYIStlGOq8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzNTgwMTA2NiwianRpIjoiNmJkZDBkMmFhYjExNDdjNjkyMTQ2ZDFkNmJlMzUwZWEiLCJ1c2VyX2lkIjoxfQ._m48yTVSM1rMNMU-f3cJKMnNcVpdC7hyXLjLJ7qu4Ew\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MicroservicioInmuebles",
+			"item": [
+				{
+					"name": "publicar espacio;AgregarInmueble",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"propietario\" :  \"JuanPropietario1\",\r\n        \"ubicacionCiudad\" : \"Bogota\",\r\n        \"ubicacionBarrio\" : \"Bosa\",\r\n        \"habitaciones\" : 3,\r\n        \"numeroBanios\" : 3,\r\n        \"dimension\" : 40,\r\n        \"tipoInmueble\": \"Casa\",\r\n        \"descripcion\" : \"Buena vista\",\r\n        \"precioDia\" : 1000,\r\n        \"disponible\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/publicarEspacio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"publicarEspacio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarInmueble",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"61abf728911a1936eb003660\",\r\n    \"propietario\": \"JuanPropietario\",\r\n    \"ubicacionCiudad\": \"Bogota\",\r\n    \"ubicacionBarrio\": \"Bosa\",\r\n    \"habitaciones\": 3,\r\n    \"numeroBanios\": 3,\r\n    \"dimension\": 40.0,\r\n    \"tipoInmueble\": \"Casa\",\r\n    \"descripcion\": \"Buena vista, Mod\",\r\n    \"precioDia\": 1000.0,\r\n    \"disponible\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/inmueble/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inmueble",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarInmueble",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/inmueble/delete/61abf778911a1936eb003661",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inmueble",
+								"delete",
+								"61abf778911a1936eb003661"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home;ConsultarInmueblesDisponibles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/inmueblesID/61ac3a25a4dbf32b317aa3c6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inmueblesID",
+								"61ac3a25a4dbf32b317aa3c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home;ConsultarInmueblesDisponibles Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/inmuebles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inmuebles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MisEspacios;ConsultarInmueble",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/misEspacios/JuanPropietario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"misEspacios",
+								"JuanPropietario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AñadirReservas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idInmueble\" : \"61abf728911a1936eb003660\",\r\n        \"inquilino\" : \"juanInquilino\",\r\n        \"fechaInicio\" : \"07-12-2021\",\r\n        \"fechaFin\" : \"08-12-2021\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/reservas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "misReservas;ConsultarReserva por Inquilino",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/misReservas/juanInquilino",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"misReservas",
+								"juanInquilino"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mis Alquileres,, consultar reservas porPropietario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/misBalances/JuanPropietario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"misBalances",
+								"JuanPropietario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarReserva",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"61ac413c67648b192fb50a8d\",\r\n        \"idInmueble\": \"61abf728911a1936eb003660\",\r\n        \"fechaInicio\": \"07-12-2021\",\r\n        \"fechaFin\": \"08-12-2021\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/misReservas/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"misReservas",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarReserva",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/misReservas/delete/61ac3a25a4dbf32b317aa3c6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"misReservas",
+								"delete",
+								"61ac3a25a4dbf32b317aa3c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InmueblesPorCiudad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/inmueblesCiudad/Bogota",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inmueblesCiudad",
+								"Bogota"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
