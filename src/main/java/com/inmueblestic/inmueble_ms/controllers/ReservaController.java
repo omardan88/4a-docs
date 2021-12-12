@@ -70,6 +70,12 @@ public class ReservaController {
         }
         return reservasUsuario;
     }
+    @GetMapping("/reserva/{id}")
+    Reserva getReservasId(@PathVariable String id){
+        Reserva reserva = reservaRepository.findById(id)
+                .orElseThrow(() -> new ReservaNotFoundException("No se encontro la reserva"));
+        return reserva;
+    }
 
     @PutMapping("/misReservas/update")
     //METODO UPDATE, PUEDE SOBREESCRIBR FECHAS YA AGENDADAS, SE DEBE VALIDAR EN UN FUTURO
@@ -77,7 +83,8 @@ public class ReservaController {
         Reserva reservaUpdate = reservaRepository.findById(reserva.getId()).orElseThrow(
                 () -> new ReservaNotFoundException("No se encontro una reserva asociada")
         );
-        Inmueble inmuebleAlquilado = inmuebleRepository.findById(reserva.getIdInmueble()).orElse(null);
+
+        Inmueble inmuebleAlquilado = inmuebleRepository.findById(reservaUpdate.getIdInmueble()).orElse(null);
         if (inmuebleAlquilado == null) {
             throw new InmuebleNoFoundException("No se encontro el inmueble indicado");
         }
